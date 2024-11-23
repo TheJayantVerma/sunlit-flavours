@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Sunlit Flavours</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Other Bootstrap for Footer -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        section {
+            margin: 20px 0;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Including the header partial / Navbar-->
+    <%- include('partials/header') %>
+
+    <div class="container text-center">
+    <section>
+        <h2 class="section_heading">About Sunlit Flavours</h2>
+        <p>Welcome to Sunlit Flavours, an academic project designed by me, <strong>Jayant Verma</strong>, as a part of my MCA final semester requirements. This website serves as a demonstration of a comprehensive food ordering platform, showcasing my skills and dedication to building a functional, user-friendly web application.</p>
+    </section>
+
+    <section>
+        <h2 class="section_heading">What is Sunlit Flavours?</h2>
+        <p>Sunlit Flavours is a simulated online platform that presents a seamless experience of browsing through a diverse food menu, managing a cart, and initiating an order process. The goal was to develop a project that not only fulfills academic criteria but also highlights a practical understanding of building user-centric web applications.</p>
+    </section>
+
+    <section>
+        <h2 class="section_heading">Features of Sunlit Flavours:</h2>
+        <table class="table table-striped">
+            <tr>
+                <td><strong>Menu Display:</strong></td>
+                <td>An engaging page that showcases various dishes, each accompanied by descriptions and images.</td>
+            </tr>
+            <tr>
+                <td><strong>Cart Functionality:</strong></td>
+                <td>Users can add items to their cart, adjust quantities, and view an updated summary of their selections.</td>
+            </tr>
+            <tr>
+                <td><strong>Order Summary:</strong></td>
+                <td>A clear breakdown of items added to the cart, ensuring a smooth transition to placing an order.</td>
+            </tr>
+            <tr>
+                <td><strong>Contact Section:</strong></td>
+                <td>A straightforward way for visitors to connect or learn more about the website.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2 class="section_heading">Acknowledgements</h2>
+        <p>This project was developed through consistent self-learning, research, and the use of official documentation for technologies and frameworks involved. Alongside my own dedication, various reputable online resources played a supportive role in clarifying complex issues and enhancing my understanding of web development concepts.</p>
+    </section>
+
+    <section>
+        <h2 class="section_heading">Potential for the Future</h2>
+        <p>While currently built to demonstrate the core functionalities of an online food ordering system, Sunlit Flavours holds the potential to evolve into a complete e-commerce simulation site, offering more dynamic features and an even more immersive experience.</p>
+        <p>Thank you for visiting Sunlit Flavours. Your interest and feedback are valued as I continue to learn and grow as a developer.</p>
+    </section>
+    </div>
+
+    <!-- Footer Partial -->
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

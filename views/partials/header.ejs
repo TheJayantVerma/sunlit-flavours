@@ -1,0 +1,61 @@
+<div class="topnav" id="myTopnav">
+    <h1 class="title text-center">Sunlit Flavours</h1>
+    <div class="nav-links">
+        <a href="/" class="<%= currentPage === 'home' ? 'active' : '' %>"><i class="fa-solid fa-house-chimney"></i> Home</a>
+        <a href="/menu" class="<%= currentPage === 'menu' ? 'active' : '' %>"><i class="fa-solid fa-utensils"></i> Menu</a>
+        <a href="/cart" class="<%= currentPage === 'cart' ? 'active' : '' %>"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+        <a href="/#contact" class="<%= currentPage === 'contact' ? 'active' : '' %>" id="contactLink"><i class="fa-regular fa-message"></i> Contact</a>
+        <a href="/about" class="<%= currentPage === 'about' ? 'active' : '' %>"><i class="fa-solid fa-circle-info"></i> About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contactSection = document.querySelector('#contact');
+  const contactLink = document.querySelector('#contactLink');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Set up the Intersection Observer
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5 // Trigger when 50% of the section is visible
+  };
+
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add active class when the section is in view
+        contactLink.classList.add('active');
+      } else {
+        // Remove active class when the section is out of view
+        contactLink.classList.remove('active');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  observer.observe(contactSection);
+
+  // Add an event listener for the click event
+  contactLink.addEventListener('click', (event) => {
+    // Remove the active class from all other nav links
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Add the active class to the contact link
+    contactLink.classList.add('active');
+  });
+});
+
+</script>
