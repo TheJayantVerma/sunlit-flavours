@@ -52,9 +52,9 @@
                                 <h5 class="card-title"><%= item.name %></h5>
                                 <p class="card-text"><%= item.description %></p>
                                 <p class="card-text"><strong>Price: ₹<%= item.price %></strong></p>
-                                <button class="btn btn-success add-to-cart w-100" data-id="<%= item._id %>" data-name="<%= item.name %>" data-price="<%= item.price %>" data-image="<%= item.imageUrl %>">
+                                <a href="/menu" class="btn btn-success add-to-cart w-100" data-id="<%= item._id %>" data-name="<%= item.name %>" data-price="<%= item.price %>" data-image="<%= item.imageUrl %>">
                                   <i class="fas fa-cart-plus"></i> Order
-                              </button>
+                              </a>
                             </div>
                         </div>
                     </div>
